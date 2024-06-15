@@ -1,31 +1,15 @@
 spring:
-  boot:
-    admin:
-      client:
-        url: http://localhost:1111/
-  datasource:
-    username: ashokit
-    password: AshokIT@123
-    url: jdbc:mysql://localhost:3306/ashokit_ecomm
-
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
-    
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+      show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/ashokit_ecomm
+    username: root
+    password: praveen127
+
+#config:
+#  import: optional:configserver:http://localhost:2222/
 
 server:
- port: 8081
-
-# Application messages goes here
-auth-service:
- messages: 
-  userReg: User Created
-  userRegErr: User Creation Failed
-  login: Login Success
-  loginErr: Invalid Credentials  
+  port: 8081
